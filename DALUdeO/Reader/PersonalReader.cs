@@ -15,8 +15,10 @@ namespace DALUdeO.Reader
 {
     class PersonalReader : ObjectReadaWithConnection<PersonalModel>
     {
-        private string DefaultCommad = "insert into personaltbl";
-        public PersonalReader(TipoQuery conFiltros, PersonalModel personalModel)
+        private string DefaultCommad = "insert into personaltbl(IdPersonal, Nombre,Apellidos, Direccion,Area,Puesto )"; //modifique
+
+        //revisar
+        public PersonalReader()
         {
 
         }
@@ -28,7 +30,7 @@ namespace DALUdeO.Reader
                     this.DefaultCommad = QueryProcessor.QueryAll(QuerysRepo.InsertAll, "odeodal.personaltbl");
                     break;
                 case TipoQuery2.PorId:
-                    this.DefaultCommad = QueryProcessor.QueryByID(QuerysRepo.InsertByID, "odeodal.personaltbl", "idpersona", personalModel.IdPersona.ToString());
+                    this.DefaultCommad = QueryProcessor.QueryByID(QuerysRepo.InsertByID, "odeodal.personaltbl", "IdPersonal", personalModel.IdPersonal.ToString());
                     break;
                 case TipoQuery2.TodosConFiltros:
                     this.DefaultCommad = QueryProcessor.QueryAll(QuerysRepo.InsertAll, "odeodal.personatbl", personalModel);
@@ -50,14 +52,16 @@ namespace DALUdeO.Reader
 
         protected override MapperBase<PersonalModel> GetMapper()
         {
-            Collection<IDataParameter> collection = new Collection<IDataParameter>();
-            return collection;
+            MapperBase<PersonalModel> mapper = new PersonalMapper();
+            return mapper;
         }
+
+    
 
         protected override Collection<IDataParameter> GetParameters(IDbCommand commnad)
         {
-            MapperBase<PersonalModel> mapper = new PersonalMapper();
-            return mapper;
+            Collection<IDataParameter> collection = new Collection<IDataParameter>();
+            return collection;
         }
     }
 }

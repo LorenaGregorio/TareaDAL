@@ -19,6 +19,7 @@ namespace DALUdeO.Mapper
                     Nombre = registro["Nombre"] == DBNull.Value ? string.Empty : (string)registro["Nombre"],
                     Apellido = registro["Apellido"] == DBNull.Value ? string.Empty : (string)registro["Apellido"],
                     Direccion = registro["Direccion"] == DBNull.Value ? string.Empty : (string)registro["Direccion"]
+
                 };
                 return Persona;
             }

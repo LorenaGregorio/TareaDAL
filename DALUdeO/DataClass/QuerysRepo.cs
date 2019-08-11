@@ -13,9 +13,7 @@ namespace DALUdeO.DataClass
         public const string SelectAllByFilters = "SELECT * FROM odeodal.persona ";
         public const string SelectByIDByFilters = "SELECT * FROM odeodal.persona WHERE idpersona = ID";
 
-        public enum TipoQuery { Todos, PorId, TodosConFiltros, PorIdConFiltro,
-            ConFiltros
-        }
+        public enum TipoQuery { Todos, PorId, TodosConFiltros, PorIdConFiltro, ConFiltros }
 
         public const string InsertAll = "insert into personaltbl (Nombres, Apellidos, Direccion, Area, Puesto)";
         public const string InsertById = "insert into personaltbl WHERE idpersona = ID";

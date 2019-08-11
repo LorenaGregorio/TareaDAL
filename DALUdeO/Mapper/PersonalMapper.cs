@@ -16,16 +16,16 @@ namespace DALUdeO.Mapper
             {
                 PersonalModel Personal = new PersonalModel
                 {
-                    IdPersona = registro["IdPersonal"] == DBNull.Value ? 0 : (int)registro["IdPersonal"],
+                    IdPersonal = registro["IdPersonal"] == DBNull.Value ? 0 : (int)registro["IdPersonal"],
                     Nombres = registro["Nombres"] == DBNull.Value ? string.Empty : (string)registro["Nombres"],
                     Apellidos = registro["Apellidos"] == DBNull.Value ? string.Empty : (string)registro["Apellidos"],
                     Direccion = registro["Direccion"] == DBNull.Value ? string.Empty : (string)registro["Direccion"],
                     Area = registro["Area"] == DBNull.Value ? string.Empty : (string)registro["Area"],
                     Puesto = registro["Puesto"] == DBNull.Value ? string.Empty : (string)registro["Puesto"],
-                    HoraEntrada = registro["HoraEntrada"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraEntrada"],
-                    HoraSalida = registro["HoraSalida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraSalida"],
-                    HoraSalidaComida = registro["HoraSalidaComida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraSalidaComida"],
-                    HoraEntradaComida = registro["HoraEntradaComida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraEntradaComida"],
+                    //HoraEntrada = registro["HoraEntrada"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraEntrada"],
+                    //HoraSalida = registro["HoraSalida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraSalida"],
+                    //HoraSalidaComida = registro["HoraSalidaComida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraSalidaComida"],
+                    //HoraEntradaComida = registro["HoraEntradaComida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraEntradaComida"],
                     
 
 

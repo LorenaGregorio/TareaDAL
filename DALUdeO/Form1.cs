@@ -127,14 +127,16 @@ namespace DALUdeO
             try
             {
                 PersonalModel personalModel = new PersonalModel();
-                personalModel.IdPersona = 2;
-                personalModel.Nombres = "Claudia";
+                
+                personalModel.Nombres = "Sonia";
                 personalModel.Apellidos = "Banana";
+                personalModel.Direccion = "Zona 4";
                 personalModel.Area = "Administracion";
                 personalModel.Puesto = "Secretaria";
+
                 //Clase.Enum
                 //Recibe el TipoQuery como la PersonaModel
-                PersonalReader reader = new PersonalReader(QuerysRepo.TipoQuery.TodosConFiltros, personalModel);
+                PersonalReader reader = new PersonalReader(QuerysRepo.TipoQuery2.Todos, personalModel);
                 Collection<PersonalModel> personales = reader.Execute();
 
                 foreach (PersonalModel p in personales)
