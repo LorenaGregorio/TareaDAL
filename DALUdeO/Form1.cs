@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using DALUdeO.Conexion;
+using Modelos.Personal;
 
 namespace DALUdeO
 {
@@ -119,6 +120,32 @@ namespace DALUdeO
             textBox2.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
             textBox3.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PersonalModel personalModel = new PersonalModel();
+                personalModel.IdPersona = 2;
+                personalModel.Nombres = "Claudia";
+                personalModel.Apellidos = "Banana";
+                personalModel.Area = "Administracion";
+                personalModel.Puesto = "Secretaria";
+                //Clase.Enum
+                //Recibe el TipoQuery como la PersonaModel
+                PersonalReader reader = new PersonalReader(QuerysRepo.TipoQuery.TodosConFiltros, personalModel);
+                Collection<PersonalModel> personales = reader.Execute();
+
+                foreach (PersonalModel p in personales)
+                {
+                    MessageBox.Show(string.Format("{0},{1},{2},{3},{4}", p.Nombres, p.Apellidos, p.Direccion, p.Area, p.Puesto));
+                }
+            }   
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

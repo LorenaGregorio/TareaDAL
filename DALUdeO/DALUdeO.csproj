@@ -72,11 +72,13 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Mapper\MapperBase.cs" />
+    <Compile Include="Mapper\PersonalMapper.cs" />
     <Compile Include="Mapper\PersonaMapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reader\ObjectReadaWithConnection.cs" />
     <Compile Include="Reader\ObjectReaderBase.cs" />
+    <Compile Include="Reader\PersonalReader.cs" />
     <Compile Include="Reader\PersonaReader.cs" />
     <Compile Include="Utils\QueryProcessor.cs" />
     <EmbeddedResource Include="Form1.resx">
