@@ -14,10 +14,10 @@ namespace Modelos.Personal
         public string Direccion { get; set; }
         public string Area { get; set; }
         public string Puesto { get; set; }
-        //public DateTime HoraEntrada { get; set; }
-        //public DateTime HoraSalida { get; set; }
-        //public DateTime HoraSalidaComida { get; set; }
-        //public DateTime HoraEntradaComida { get; set; }
+        public DateTime HoraEntrada { get; set; }
+        public DateTime HoraSalida { get; set; }
+        public DateTime HoraSalidaComida { get; set; }
+        public DateTime HoraEntradaComida { get; set; }
 
     }
 }

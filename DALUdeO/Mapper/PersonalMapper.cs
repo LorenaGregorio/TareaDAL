@@ -22,11 +22,11 @@ namespace DALUdeO.Mapper
                     Direccion = registro["Direccion"] == DBNull.Value ? string.Empty : (string)registro["Direccion"],
                     Area = registro["Area"] == DBNull.Value ? string.Empty : (string)registro["Area"],
                     Puesto = registro["Puesto"] == DBNull.Value ? string.Empty : (string)registro["Puesto"],
-                    //HoraEntrada = registro["HoraEntrada"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraEntrada"],
-                    //HoraSalida = registro["HoraSalida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraSalida"],
-                    //HoraSalidaComida = registro["HoraSalidaComida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraSalidaComida"],
-                    //HoraEntradaComida = registro["HoraEntradaComida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraEntradaComida"],
-                    
+                    HoraEntrada = registro["HoraEntrada"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraEntrada"],
+                    HoraSalida = registro["HoraSalida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraSalida"],
+                    HoraSalidaComida = registro["HoraSalidaComida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraSalidaComida"],
+                    HoraEntradaComida = registro["HoraEntradaComida"] == DBNull.Value ? DateTime.Today : (DateTime)registro["HoraEntradaComida"],
+
 
 
 

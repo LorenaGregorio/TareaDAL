@@ -127,7 +127,7 @@ namespace DALUdeO
             try
             {
                 PersonalModel personalModel = new PersonalModel();
-                
+                personalModel.IdPersonal = 9;
                 personalModel.Nombres = "Sonia";
                 personalModel.Apellidos = "Banana";
                 personalModel.Direccion = "Zona 4";
